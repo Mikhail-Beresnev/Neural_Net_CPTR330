@@ -1,0 +1,12 @@
+pylint:
+  image: "python:latest"
+  script:
+    - pip install pylint
+    - pylint src tests
+
+pytest:
+  image: "python:latest"
+  script:
+    - pip install pytest
+    - pip install -r requirements.txt
+    - pytest
